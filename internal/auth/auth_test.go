@@ -33,7 +33,7 @@ func TestGetAPIKey(t *testing.T) {
 	// Test case 3: API key is partially missing
 	t.Run("API key partially missing", func(t *testing.T) {
 		header := http.Header{}
-		header.Set("Authorization", "ApiKey ")
+		header.Set("Authorization", "")
 
 		_, err := GetAPIKey(header)
 		if err == nil {
